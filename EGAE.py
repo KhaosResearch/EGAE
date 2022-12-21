@@ -20,7 +20,7 @@ import time
 
 
 
-#================== get the class indices
+######################## Get the class indices
 
 
 # Class name to the index
@@ -44,7 +44,7 @@ import tensorflow.keras
 from keras.callbacks import ModelCheckpoint, ReduceLROnPlateau, EarlyStopping
 
 
-##############################PRE TRAINED MODEL RESNET##################################
+##############################PRE-TRAINED MODEL RESNET##################################
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout, Activation, BatchNormalization, GlobalAveragePooling2D
 from tensorflow.keras.applications import ResNet50
@@ -107,7 +107,7 @@ tt=[]
 
 picture=np.expand_dims(image, axis=0)
 YHAT=model.predict(picture)[0][class_to_explain]
-### PROBLEM DEFINITION###############
+################### PROBLEM DEFINITION###############
 MaxIt=151;
 nPop=3;
 pc=0.9;
@@ -245,7 +245,7 @@ def RouletteWheelSelection(P):
     return i
     
  
-# sp=1.5   #selection pressure
+
 import math
 #####INITIALIZATION##################
 from ypstruct import struct
@@ -254,7 +254,7 @@ phi=0.5
 lst = [None] * limit
 start=time.time()
 
-##### heuristically find the best picture when segments=5
+##### Heuristically find the best picture when segments=5
 
 
 superpixels= slic(image, n_segments=5)   
@@ -293,7 +293,7 @@ for i in range (2**n):
         # fidelity label=1 and nonfidelity    
         if  heuristic.fit > TEMP  and uu == class_to_explain[0][0]:
 
-             # sig=1 
+              
              lst[el]=perturbed_image
              TEMP=heuristic.fit
              # heuristic.NuSuperpixels=len(active_pixels)
@@ -302,7 +302,7 @@ for i in range (2**n):
              print(TEMP)
              
 
-# sig=0
+
 w1=heuristic.NuSuperpixels
 w2=nVar
 phi=0.5
@@ -314,8 +314,8 @@ if 0.5 < (w1/w2) < 1:
 if w1/w2 == 1:
     phi=0.9
 
-# if sig==0:
-#     el=-1
+
+
 el=-1
 
 si=[0]*limit
@@ -489,14 +489,14 @@ for co in range(1,limit):
              
                popm[k].yhat,popm[k].pictu,popm[k].acc,popm[k].fit=perturb_image(image,popm[k].position,superpixels,it)
 
-# Distructor
-   
-    
-   
-     # Distructor
-    
-             
-             
+######################
+### Some sections of the 
+### code are commented.Though    
+### they can be used  for   
+### fidelity check if uncommented     
+######################    
+######################             
+######################             
      # merge population        
          pop= pop+popc+popm    
          pop=sorted(pop,key=operator.attrgetter('fit'), reverse=True)
@@ -597,7 +597,7 @@ print("Time = ", end-start,  "NFE = ", NFE)
 
 
 
-### Voting strategies############################
+### Pre-calculation for voting strategies############################
 
 Flst = [None] * limit
 
@@ -660,13 +660,13 @@ for active in active_images:
       FFlst[k]=lst[active]
       k=k+1
       
-#####CONSENSUS      
+#####CONSENSUS VOTING############     
 for j in range (k):
    R2[:,:,:,j]=np.array(FFlst[j]) 
 consensus=np.power(np.prod(R2, axis=3),1/(R2.shape[3]))
 plt.imshow(consensus)
 plt.axis('off')
-#####Majority
+#####Majority VOTING#############
 
 
 
