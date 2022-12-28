@@ -20,7 +20,7 @@ import time
 
 
 
-######################## Get the class indices
+######################### Get the class indices
 
 
 # Class name to the index
