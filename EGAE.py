@@ -392,9 +392,9 @@ for co in range(1,limit):
    
     
        Fits[i]=pop[i].fit
-     Fits=np.sort(Fits)[::-1]
+     ##Fits=np.sort(Fits)[::-1]
      P=np.zeros(nPop)
-     WorstFit=pop[nPop-1].fit
+     WorstFit=np.sort(Fits)[::-1][nPop-1]
      for j in range (nPop):
           P[j]=math.exp(-sp*(1/Fits[j])/(1/WorstFit))
      P=P/sum(P)
@@ -419,7 +419,7 @@ for co in range(1,limit):
      BestFits[it]=BestSol.fit
 
 ##store worst fit
-     WorstFit=pop[nPop-1].fit
+     WorstFit=np.sort(Fits)[::-1][nPop-1]
 
 
 ### array to hold best values in all iterations
@@ -514,13 +514,13 @@ for co in range(1,limit):
              
     
     # Update WorstFit
-         WorstFit=min(pop[nPop-1].fit,WorstFit)
+         WorstFit=min(np.sort(Fits)[::-1][nPop-1],WorstFit)
     
     # Calculate selection probabilities
          Fits=np.zeros(nPop)
          for jj in range (nPop):
              Fits[jj]=pop[jj].fit
-         Fits=np.sort(Fits)[::-1]
+         ##Fits=np.sort(Fits)[::-1]
          P=np.zeros(nPop)
          for j in range (nPop):
               P[j]=math.exp(-sp*(1/Fits[j])/(1/WorstFit))
