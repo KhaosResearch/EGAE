@@ -1,5 +1,5 @@
 # EGAE
-Automation of LIME using ensemble-based genetic algorithm explainer: A case study on melanoma detection dataset
+[Automation of LIME using ensemble-based genetic algorithm explainer: A case study on melanoma detection dataset](https://www.sciencedirect.com/science/article/pii/S0010482523000781?via%3Dihub)
 
 Due to space limitation in github the data needed to run EGAE including the saved weights for the model, training and test sets and their labels (in the numpy.ndarray format), and the ground truths delineated by experts for accuracy calculation of 8 sample images in the paper are [here](https://drive.google.com/drive/folders/1341NsT56HIh4DyB6R0ViuxPtDD1AWfdg?usp=sharing).
 
@@ -51,5 +51,11 @@ You can also run LIME separately (lines 770-779) with a predefined number of sup
 
 1- Run lines 752-756
 
+################################################################################################################################
+######################################################TYPOS in the paper########################################################
 
+The paper contains a single typo. This typo is only present in the paper, and as a result, the implementation, as well as the corresponding figures and tables, is entirely accurate.
+
+1- The donominator in Eq.5 should change to (∑j​e−θ((1/fj)/(1/WorstFit)​​))  and thus Eq.5 is 
+Pi​=(e−θ((1/fi)/(1/WorstFit​​)))​/(∑j​e−θ((1/fj)/(1/WorstFit)​​))
 
