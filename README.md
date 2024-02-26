@@ -1,5 +1,5 @@
 # EGAE
-[Automation of LIME using ensemble-based genetic algorithm explainer: A case study on melanoma detection dataset](https://www.sciencedirect.com/science/article/pii/S0010482523000781?via%3Dihub)
+[Ensemble-based genetic algorithm explainer with automized image segmentation: A case study on melanoma detection dataset](https://www.sciencedirect.com/science/article/pii/S0010482523000781?via%3Dihub)
 
 Due to space limitation in github the data needed to run EGAE including the saved weights for the model, training and test sets and their labels (in the numpy.ndarray format), and the ground truths delineated by experts for accuracy calculation of 8 sample images in the paper are [here](https://drive.google.com/drive/folders/1341NsT56HIh4DyB6R0ViuxPtDD1AWfdg?usp=sharing).
 
