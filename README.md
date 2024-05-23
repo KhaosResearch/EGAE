@@ -59,6 +59,6 @@ You can also run LIME separately (lines 770-779) with a predefined number of sup
 
 The paper contains a single typo. This typo is only present in the paper, and as a result, the implementation, as well as the corresponding figures and tables in the paper, are entirely accurate.
 
-1- The donominator in Eq.5 should change to (∑j​e−θ((1/fj)/(1/WorstFit)​​))  and thus Eq.5 is 
+1- The denominator in Eq.5 should change to (∑j​e−θ((1/fj)/(1/WorstFit)​​))  and thus Eq.5 is 
 Pi​=(e−θ((1/fi)/(1/WorstFit​​)))​/(∑j​e−θ((1/fj)/(1/WorstFit)​​))
 
